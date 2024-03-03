@@ -10,7 +10,7 @@
     - Use PCA to reduce the dimensionality of the faces, and train a Support Vector Machine (SVM) to recognize the faces.
     - Save the trained model to disk.
 
-##### Attention: Before training the model, we can use facenet to extract the features of the faces replacing the PCA. The model will be trained with the features extracted by facenet.
+##### Attention: Before training the model, we can use facenet to extract the features of the faces replacing the PCA. The model will be trained with the features extracted by facenet.[https://www.cv-foundation.org/openaccess/content_cvpr_2015/app/1A_089.pdf]
 
 - In face_process.py, we will create a class to process images:
     - Detect faces in the images with cascade classifier in OpenCV.
