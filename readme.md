@@ -18,3 +18,24 @@
     - Drop black padding from the aligned faces.
 
 - In predict-new.ipynb, we will use the trained model to predict faces in a new image.
+
+### Data train for triplet loss
+
+- The data train for triplet loss is in the website [https://www.kaggle.com/datasets/selfishgene/youtube-faces-with-facial-keypoints]
+
+- This is a dataset of YouTube faces with facial keypoints. The facial keypoints include the following:
+    - colorImages
+    - boundingBox
+    - landmarks2D
+    - landmarks3D
+
+- Triplet loss follow:
+    - A triplet is composed by an anchor, a positive and a negative example. The anchor and the positive are the same person, and the negative is a different person.
+    - The loss function is defined by the following equation:
+        ![alt text](./images/tripless_loss.png)
+    - Where:
+        - A is the representation of the Anchor image. (Vector of features extracted by model)
+        - P is the representation of the Positive image (from the same class as the Anchor). (Vector of features extracted by model)
+        - N is the representation of the Negative image (from a different class than the Anchor). (Vector of features extracted by model)
+        - alpha is a margin that separates the positive and negative examples.
+        - d(A,P) is the euclidean distance between the feature vectors of the examples A and P.
