@@ -33,7 +33,7 @@ class Face_affine():
             coords[i] = (shape.part(i).x, shape.part(i).y)
         return coords
     
-    def get_reacts(self):
+    def get_rects(self):
         # detect faces in the grayscale image
         # rects = self.detector(self.gray, 1)
         rects = self.face_classifier.detectMultiScale(self.gray, scaleFactor=1.1, minNeighbors=9, minSize=(64, 64))
